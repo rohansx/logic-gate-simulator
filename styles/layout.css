@@ -1,0 +1,246 @@
+body,
+*:before,
+*:after {
+  font-family: 'PT Sans', sans-serif;
+}
+body {
+  margin: 0;
+  font-size: 16px;
+}
+nav {
+  background-color: #909CD5;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow: auto hidden;
+}
+nav > a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #909CD5;
+  color: rgba(255, 255, 255, 0.54) !important;
+  height: 64px;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 4px;
+  border-bottom: #3f51b5 solid 4px;
+  -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (max-width: 680px) {
+  nav > a {
+    font-size: 12px;
+  }
+}
+nav > a:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+nav > a:focus,
+nav > a:active {
+  color: rgba(255, 255, 255, 0.87) !important;
+  outline: none;
+  background-color: #7986CB;
+  border-bottom-color: #5C6BC0;
+}
+nav > a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #FFC107;
+  width: 100%;
+  left: 0;
+  top: -4px;
+  bottom: 64px;
+  opacity: 0;
+  -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+nav > a:target {
+  color: white !important;
+}
+nav > a:target:before {
+  top: 60px;
+  bottom: -4px;
+  opacity: 1;
+  -webkit-transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: bottom 0.3s cubic-bezier(0.4, 0, 0.2, 1), top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+nav > section,
+nav > a:target ~ section.DefaultTab {
+  position: absolute;
+  top: 64px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+          transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+  margin-left: -96px;
+}
+@media (max-height: 500px) {
+  nav > section,
+  nav > a:target ~ section.DefaultTab {
+    bottom: -64px;
+  }
+}
+nav > section > div {
+  padding: 48px;
+  overflow: auto;
+  min-height: 100%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 640px) {
+  nav > section > div {
+    padding: 16px;
+  }
+}
+nav > section > div > * {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+nav > section > div.ShrinkWrap {
+  min-width: 0;
+}
+nav > a:target + section ~ section {
+  margin-left: 96px;
+}
+nav > a:target + section,
+nav section.DefaultTab {
+  pointer-events: auto;
+  opacity: 1;
+  margin: 0;
+}
+ul.CanvasList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+ul.CanvasList li {
+  text-align: center;
+  display: block;
+  margin: 24px;
+}
+h1 {
+  font-weight: normal;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+h2 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: 0;
+}
+h1 + h2 {
+  font-style: italic;
+}
+h1,
+h2,
+p {
+  width: 100%;
+  max-width: 600px;
+}
+p {
+  text-align: justify;
+}
+p + .Canvas {
+  margin-top: 3rem;
+}
+.IconList {
+  position: fixed;
+  bottom: 32px;
+  z-index: 100;
+  right: 26px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.IconList a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 6px;
+  width: 36px;
+  height: 32px;
+}
+.IconList a svg {
+  opacity: .7;
+  display: block;
+  width: 24px;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1), margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.IconList a svg:hover {
+  opacity: 1;
+}
+.IconList a:focus {
+  outline: none;
+}
+.IconList a:focus svg {
+  opacity: 1;
+  margin-left: -6px;
+  width: 36px;
+}
+
+/*# sourceMappingURL=layout.css.map */

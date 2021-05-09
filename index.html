@@ -1,0 +1,544 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>LGS &ndash; LOGIC GATES &amp; ADDERS!</title>
+	<meta name="viewport" content="width=device-width" />
+	<link href="//fonts.googleapis.com/css?family=PT+Sans:400,400italic" rel="stylesheet" type="text/css" />
+	<link href="styles/layout.css" rel="stylesheet" />
+	<link href="styles/gate-theme.css" rel="stylesheet" />
+	<link href="styles/basic-gates.css" rel="stylesheet" />
+
+	<meta name="theme-color" content="#909CD5">
+	<meta name="msapplication-TileColor" content="#909CD5">
+	
+	<meta name="msapplication-TileImage" content="/icons/mstile-144x144.png">
+
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-3656687-6', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<body>
+	<nav>
+		<a href="#simple-and"id="simple-and" tabindex="1">AND GATE</a>
+		<section>
+			<div class="ShrinkWrap">
+				<p>
+				An <b>AND Gate</b>performs logical Conjunction - It behsves like a truthtable , when one or both inputs are <b>Low</b> then it results as <b>0</b> , otherwise it results as <b>1</b>. 
+			</p>
+					
+			<div class="Canvas" style="width: 9rem; height: 17rem;">
+							<input type="checkbox" id="simple-and-a" style="top: 0; left: 0;" />
+							<label for="simple-and-a" style="top: 0; left: 0;"></label>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 3rem; left: 1.5rem; height: 2rem;"></div>
+								<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 1.5rem; width: 2rem;"></div>
+								<div class="Connector Vertical Corner Left" style="top: 5rem; left: 3.5rem; height: 2rem;"></div>
+							</div>
+
+							<input type="checkbox" id="simple-and-b" style="top: 0; left: 6rem;" />
+							<label for="simple-and-b" style="top: 0; left: 6rem;"></label>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 2rem;"></div>
+								<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 5.5rem; width: 2rem;"></div>
+								<div class="Connector Vertical Corner Right" style="top: 5rem; left: 5.5rem; height: 2rem;"></div>
+							</div>
+
+							<div id="simple-and-gate" class="Gate AND" style="left: 2.5rem; top: 7rem;">
+								<span></span>
+								<span></span>
+								<div></div>
+							</div>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 12rem; left: 4.5rem; height: 2rem;"></div>
+								<div class="Result" style="left: 3rem; top: 14rem;"></div>
+							</div>
+							</div>
+							<li>
+							</li>
+					        <style>
+							table , th , td {
+							border : 1px solid black;
+							}
+							</style>
+					        <h2>  <b> <mark> TRUTHTABLE </mark> </b> </h2>
+		            <table align = "right">
+				            <tr>
+					          <th>A</th>
+					          <th>B</th>
+				        	 <th>OUTPUT</th>
+					        </tr>
+					        <tr>
+					          <td>0</td>
+					          <td>0</td>
+					          <td>0</td>
+					        </tr>
+					        <tr>
+					         <td>0</td>
+					         <td>1</td>
+					         <td>0</td>
+					        </tr>
+					        <tr>
+					            <td>1</td>
+					            <td>0</td>
+					            <td>0</td>
+					        </tr>
+					        <tr>
+					          <td>1</td>
+					          <td>1</td>
+					          <td>1</td>
+					        </tr>
+					</table>
+					</section>
+					
+					<a href="#simple-or" id="simple-or" tabindex="2">OR GATE</a>
+		            <section>
+					<div class= "ShrinkWrap">
+					 <p>
+					 An <b>OR Gate</b> is a logical disjunction- It behaves according to truthtable , it results <b>High</b> output when one or both inputs are high , otherwise it gives <b>Low</b> as an output.
+					</p>
+						<div class="Canvas" style="width: 9rem; height: 17rem;">
+							<input type="checkbox" id="simple-or-a" style="top: 0.5rem; left: 0;" />
+							<label for="simple-or-a" style="top: 0.5rem; left: 0;"></label>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 3.5rem; left: 1.5rem; height: 2rem;"></div>
+								<div class="Connector Horizontal Corner Left Up" style="top: 5.5rem; left: 1.5rem; width: 2rem;"></div>
+								<div class="Connector Vertical Corner Left" style="top: 5.5rem; left: 3.5rem; height: 2rem;"></div>
+								<div class="Connector Vertical Convex Left" style="top: 7.5rem; left: 3.5rem;"></div>
+							</div>
+
+							<input type="checkbox" id="simple-or-b" style="top: 0.5rem; left: 6rem;" />
+							<label for="simple-or-b" style="top: 0.5rem; left: 6rem;"></label>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 3.5rem; left: 7.5rem; height: 2rem;"></div>
+								<div class="Connector Horizontal Corner Right Up" style="top: 5.5rem; left: 5.5rem; width: 2rem;"></div>
+								<div class="Connector Vertical Corner Right" style="top: 5.5rem; left: 5.5rem; height: 2rem;"></div>
+								<div class="Connector Vertical Convex Right" style="top: 7.5rem; left: 5.5rem;"></div>
+							</div>
+
+							<div id="simple-or-gate" class="Gate OR" style="left: 2.5rem; top: 7.5rem;">
+								<span></span>
+								<span></span>
+								<div></div>
+							</div>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 11.5rem; left: 4.5rem; height: 2rem;"></div>
+								<div class="Result" style="left: 3rem; top: 13.5rem;"></div>
+							</div>
+						</div>
+						<li>
+						</li>
+				          <style>
+							table , th , td {
+							border : 1px solid black;
+							}
+							</style>
+					        <h2>  <b> <mark> TRUTHTABLE </mark> </b> </h2>
+		                   <table>
+				            <tr>
+					          <th>A</th>
+					          <th>B</th>
+				        	 <th>OUTPUT</th>
+					        </tr>
+					        <tr>
+					          <td>0</td>
+					          <td>0</td>
+					          <td>0</td>
+					        </tr>
+					        <tr>
+					         <td>0</td>
+					         <td>1</td>
+					         <td>1</td>
+					        </tr>
+					        <tr>
+					            <td>1</td>
+					            <td>0</td>
+					            <td>1</td>
+					        </tr>
+					        <tr>
+					          <td>1</td>
+					          <td>1</td>
+					          <td>1</td>
+					        </tr>
+					</table>
+					</section>
+					<a href="#simple-xor" id="simple-xor" tabindex="3">XOR GATE</a>
+		            <section>
+					<div class= "ShrinkWrap">
+					 <p>
+					 A <b>XOR Gate</b> , Sometimes Pronounced As EX-OR is known as Exclusive OR Gate. It gives HIGH input i.e "1" when the inputs are odd , 
+					 if both the inputs are "0" i.e LOW or both the inputs are "1" e HIGH It gives False Output (0). XOR represents inequality function i.e the outputs is true if both inputs are'nt alike otherwise the output is false.
+					A way to remember <b> "XOR must have one or the other but not both" </b> 
+					</p>
+						
+						<div class="Canvas" style="width: 9rem; height: 17rem;">
+							<input type="checkbox" id="simple-xor-a" style="top: 0; left: 0;" />
+							<label for="simple-xor-a" style="top: 0; left: 0;"></label>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 3rem; left: 1.5rem; height: 2rem;"></div>
+								<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 1.5rem; width: 2rem;"></div>
+								<div class="Connector Vertical Corner Left" style="top: 5rem; left: 3.5rem; height: 2rem;"></div>
+								<div class="Connector Vertical Convex Left" style="top: 7rem; left: 3.5rem;"></div>
+							</div>
+
+							<input type="checkbox" id="simple-xor-b" style="top: 0; left: 6rem;" />
+							<label for="simple-xor-b" style="top: 0; left: 6rem;"></label>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 2rem;"></div>
+								<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 5.5rem; width: 2rem;"></div>
+								<div class="Connector Vertical Corner Right" style="top: 5rem; left: 5.5rem; height: 2rem;"></div>
+								<div class="Connector Vertical Convex Right" style="top: 7rem; left: 5.5rem;"></div>
+							</div>
+
+							<div id="simple-xor-gate" class="Gate XOR" style="left: 2.5rem; top: 7rem;">
+								<span></span>
+								<span></span>
+								<div></div>
+							</div>
+							<div class="Group">
+								<div class="Connector Vertical" style="top: 12rem; left: 4.5rem; height: 2rem;"></div>
+								<div class="Result" style="left: 3rem; top: 14rem;"></div>
+							</div>
+						</div>
+			           <li>
+						</li>
+				          <style>
+							table , th , td {
+							border : 1px solid black;
+							border-collapse: collapse;
+							}
+							th , td {
+							padding : 5px;
+							text-align : center;
+							} 
+							</style>
+					        <h2>  <b> <mark> TRUTHTABLE </mark> </b> </h2>
+		                   <table>
+				            <tr>
+					          <th>A</th>
+					          <th>B</th>
+				        	 <th>OUTPUT</th>
+					        </tr>
+					        <tr>
+					          <td>0</td>
+					          <td>0</td>
+					          <td>0</td>
+					            </tr>
+					        <tr>
+					         <td>0</td>
+					         <td>1</td>
+					         <td>1</td>
+					        </tr>
+					        <tr>
+					            <td>1</td>
+					            <td>0</td>
+					            <td>1</td>
+					        </tr>
+					        <tr>
+					          <td>1</td>
+					          <td>1</td>
+					          <td>0</td>
+					        </tr>
+							</table>
+		</section>
+		<a href="#half-adder" id="half-adder" tabindex="4">Half Adder</a>
+		<section>
+			<div class="ShrinkWrap">
+				<p>
+				A <b>Half adder</b> is defined as a basic four terminal digital device which adds two binary inputs. It ouputs the sum binary bit and a carry binary bit.
+				From the truth table we can see that the <b>Sum digit</b> of two binary inputs is outcome of XOR operation and we can realize it by using <b>XOR gate</b>. <b>Carry digit</b>of two binary inputs is outcome of AND operation and we can realize it by an <b>AND gate</b>.
+				</p>
+				<div class="Canvas" style="width: 12.5rem; height: 21rem;">
+					<input type="checkbox" id="half-adder-a" style="top: 0; left: 3.5rem;" />
+					<label for="half-adder-a" style="top: 0; left: 3.5rem;"></label>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 3rem; left: 5rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 5rem; width: 2rem;"></div>
+						<div class="Connector Vertical Corner Left" style="top: 5rem; left: 7rem; height: 6rem;"></div>
+						<div class="Connector Vertical Convex Left" style="top: 11rem; left: 7rem;"></div>
+
+						<div class="Connector Horizontal Junction Right" style="top: 7rem; left: 1rem; width: 6rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 7rem; left: 1rem; height: 4rem;"></div>
+					</div>
+
+					<input type="checkbox" id="half-adder-b" style="top: 0; left: 9.5rem;" />
+					<label for="half-adder-b" style="top: 0; left: 9.5rem;"></label>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 3rem; left: 11rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 9rem; width: 2rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 5rem; left: 9rem; height: 6rem;"></div>
+						<div class="Connector Vertical Convex Right" style="top: 11rem; left: 9rem;"></div>
+
+						<div class="Connector Horizontal Junction Right" style="top: 9rem; left: 3rem; width: 6rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 9rem; left: 3rem; height: 2rem;"></div>
+					</div>
+
+					<div id="half-adder-xor-gate" class="Gate XOR" style="left: 6rem; top: 11rem;">
+						<span></span>
+						<span></span>
+						<div></div>
+					</div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 16rem; left: 8rem; height: 2rem;"></div>
+						<div class="Result" style="left: 6.5rem; top: 18rem;"></div>
+					</div>
+
+					<div id="half-adder-and-gate" class="Gate AND" style="left: 0; top: 11rem;"></div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 16rem; left: 2rem; height: 2rem;"></div>
+						<div class="Result" style="left: 0.5rem; top: 18rem;"></div>
+					</div>
+				</div>
+                    	<li>
+						</li>
+				          <style>
+							table , th , td {
+							border : 1px solid black;
+							border-collapse: collapse;
+							}
+							th , td {
+							padding : 5px;
+							text-align : center;
+							} 
+							</style>
+					        <h2>  <b> <mark> TRUTHTABLE </mark> </b> </h2>
+		                   <table>
+				            <tr>
+							    <th>A</th>
+					          <th>B</th>
+				        	 <th>SUM</th>
+							 <th>CARRY</th>
+					        </tr>
+					        <tr>
+					          <td>0</td>
+					          <td>0</td>
+					          <td>0</td>
+							  <td>0</td>
+					            </tr>
+					        <tr>
+					         <td>0</td>
+					         <td>1</td>
+					         <td>1</td>
+							 <td>0</td>
+					        </tr>
+					        <tr>
+					            <td>1</td>
+					            <td>0</td>
+					            <td>1</td>
+								<td>0</td>
+					        </tr>
+					        <tr>
+					          <td>1</td>
+					          <td>1</td>
+					          <td>0</td>
+							  <td>1</td>
+					        </tr>
+							</table>
+		</section>
+		<a href="#full-adder" id="full-adder" tabindex="5">Full Adder</a>
+		<section>
+			<div class="ShrinkWrap">
+				<p>
+					A <b>Full Adder</b> adds three binary digits , the third digit is known as <b>C_in</b>.  The two outputs are called the <b>C_out</b> and the <b>Sum</b>. A full adder is central to most digital circuits that perform addition and subtraction.
+					The first input (which a carry-out can be chained to) is called the carry-in; the other two are usually called A and B (this designation is arbitrary; the inputs are completely symmetric).
+				</p>
+				<div class="Canvas" style="width: 21rem; height: 42rem;">
+					<input type="checkbox" id="full-adder-carry" style="top: 0; left: 6rem;" />
+					<label for="full-adder-carry" style="top: 0; left: 6rem;"></label>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 3rem; left: 7.5rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 7.5rem; width: 4rem;"></div>
+						<div class="Connector Vertical Corner Left" style="top: 5rem; left: 11.5rem; height: 13rem;"></div>
+
+						<div class="Connector Horizontal Corner Left Up" style="top: 18rem; left: 11.5rem; width: 1.5rem;"></div>
+						<div class="Connector Vertical Corner Left" style="top: 18rem; left: 13rem; height: 6rem;"></div>
+						<div class="Connector Vertical Convex Left" style="top: 24rem; left: 13rem;"></div>
+
+						<div class="Connector Horizontal Junction Right" style="top: 20rem; left: 7rem; width: 6rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 20rem; left: 7rem; height: 4rem;"></div>
+					</div>
+
+					<input type="checkbox" id="full-adder-a" style="top: 0; left: 12rem;" />
+					<label for="full-adder-a" style="top: 0; left: 12rem;"></label>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 3rem; left: 13.5rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Left Up" style="top: 5rem; left: 13.5rem; width: 2rem;"></div>
+						<div class="Connector Vertical Corner Left" style="top: 5rem; left: 15.5rem; height: 6rem;"></div>
+						<div class="Connector Vertical Convex Left" style="top: 11rem; left: 15.5rem;"></div>
+
+						<div class="Connector Horizontal Junction Right" style="top: 7rem; left: 1rem; width: 14.5rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 7rem; left: 1rem; height: 17rem;"></div>
+					</div>
+
+					<input type="checkbox" id="full-adder-b" style="top: 0; left: 18rem;" />
+					<label for="full-adder-b" style="top: 0; left: 18rem;"></label>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 3rem; left: 19.5rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Right Up" style="top: 5rem; left: 17.5rem; width: 2rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 5rem; left: 17.5rem; height: 6rem;"></div>
+						<div class="Connector Vertical Convex Right" style="top: 11rem; left: 17.5rem;"></div>
+
+						<div class="Connector Horizontal Junction Right" style="top: 9rem; left: 3rem; width: 14.5rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 9rem; left: 3rem; height: 15rem;"></div>
+					</div>
+
+					<div id="full-adder-xor-gate-input" class="Gate XOR" style="left: 14.5rem; top: 11rem;">
+						<span></span>
+						<span></span>
+						<div></div>
+					</div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 16rem; left: 16.5rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Right Up" style="top: 18rem; left: 15rem; width: 1.5rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 18rem; left: 15rem; height: 6rem;"></div>
+						<div class="Connector Vertical Convex Right" style="top: 24rem; left: 15rem;"></div>
+
+						<div class="Connector Horizontal Junction Right" style="top: 22rem; left: 9rem; width: 6rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 22rem; left: 9rem; height: 2rem;"></div>
+					</div>
+
+					<div id="full-adder-xor-gate-carry" class="Gate XOR" style="left: 12rem; top: 24rem;">
+						<span></span>
+						<span></span>
+						<div></div>
+					</div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 29rem; left: 14rem; height: 10rem;"></div>
+						<div class="Result" style="left: 12.5rem; top: 39rem;"></div>
+					</div>
+
+					<div id="full-adder-and-gate-input" class="Gate AND" style="left: 0; top: 24rem;"></div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 29rem; left: 2rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Left Up" style="top: 31rem; left: 2rem; width: 2rem;"></div>
+						<div class="Connector Vertical Corner Left" style="top: 31rem; left: 4rem; height: 2rem;"></div>
+						<div class="Connector Vertical Convex Left" style="top: 33rem; left: 4rem;"></div>
+					</div>
+
+					<div id="full-adder-and-gate-sum" class="Gate AND" style="left: 6rem; top: 24rem;"></div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 29rem; left: 8rem; height: 2rem;"></div>
+						<div class="Connector Horizontal Corner Right Up" style="top: 31rem; left: 6rem; width: 2rem;"></div>
+						<div class="Connector Vertical Corner Right" style="top: 31rem; left: 6rem; height: 2rem;"></div>
+						<div class="Connector Vertical Convex Right" style="top: 33rem; left: 6rem;"></div>
+					</div>
+
+					<div id="full-adder-or-gate-carry-out" class="Gate OR" style="left: 3rem; top: 33rem;">
+						<span></span>
+						<span></span>
+					</div>
+					<div class="Group">
+						<div class="Connector Vertical" style="top: 37rem; left: 5rem; height: 2rem;"></div>
+						<div class="Result" style="left: 3.5rem; top: 39rem;"></div>
+					</div>
+				</div>
+		
+			<li>
+						</li>
+				          <style>
+							table , th , td {
+							border : 1px solid black;
+							border-collapse: collapse;
+							}
+							th , td {
+							padding : 5px;
+							text-align : center;
+							} 
+							</style>
+					        <h2>  <b> <mark> TRUTHTABLE </mark> </b> </h2>
+		                   <table>
+				            <tr>
+							    <th>A</th>
+					          <th>B</th>
+							 <th>C_in</th>
+							 <th>SUM</th>
+							 <th>C_out</th>
+					        </tr>
+							   <tr>
+					         <td>0</td>
+					         <td>0</td>
+					         <td>0</td>
+							 <td>0</td>
+							 <td>0</td>
+					        </tr>
+					        <tr>
+					            <td>0</td>
+					            <td>0</td>
+					            <td>1</td>
+								<td>1</td>
+								<td>0</td>
+					        </tr>
+					        <tr>
+					         <td>0</td>
+					         <td>1</td>
+					         <td>0</td>
+							 <td>1</td>
+							 <td>0</th>
+					        </tr>
+					        <tr>
+					            <td>0</td>
+					            <td>1</td>
+					            <td>1</td>
+								<td>0</td>
+								<td>1</td>
+					        </tr>
+					        <tr>
+					          <td>1</td>
+					          <td>0</td>
+					          <td>0</td>
+							  <td>1</td>
+							  <td>0</td>
+					        </tr>
+							<tr>
+					          <td>1</td>
+					          <td>0</td>
+					          <td>1</td>
+							  <td>0</td>
+							  <td>1</td>
+					        </tr>
+							<tr>
+					          <td>1</td>
+					          <td>1</td>
+					          <td>0</td>
+							  <td>0</td>
+							  <td>1</td>
+					        </tr>
+							<tr>
+					          <td>1</td>
+					          <td>1</td>
+					          <td>1</td>
+							  <td>1</td>
+							  <td>1</td>
+					        </tr>
+							</table>
+		</section>
+		<section class="DefaultTab">
+			<div class="ShrinkWrap">
+			<img src = "LGS_logo.png" alt="LGS_logo" align="right" width = "400" height="250">
+				<h1>LGS</h1>
+				<h2>logic-gate-simulator<h2>
+				<h3>Implementing AND , OR  , XOR Gates in Pure HTML & CSS .</h3>
+				<p>
+					LGS is an experiment demonstrating the power of CSS selectors.  Usingan be compiled into CSS. 
+					LESS to generate selectors from declared logical operations. 
+					LESS is a Learner Style Sheet  , it is a dynamic preprocessor language that can be compiled into CSS. 
+				</p>
+				<p>
+				Logic Gate are basic building block of any digital system . It is an electronic circuit having having one or more input and only one output. the relationship between them is based on certain logic.
+			We are going to study about three gates viz.AND , OR , XOR.
+			</p>
+			</div>
+		</section>
+	</nav>
+	
+
+			</a>
+		</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,231 @@
+﻿@import "_variables";
+
+body, *:before, *:after {
+	font-family: 'PT Sans', sans-serif;
+}
+
+body {
+	margin: 0;
+	font-size: 16px;
+}
+
+nav {
+	@tabHeight: 64px;
+	@indicatorHeight: 4px;
+
+	background-color: #3F51B5;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14),0 4px 8px rgba(0, 0, 0, 0.28);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: auto hidden;
+
+	> a {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		background-color: #3F51B5;
+		color: rgba(255,255,255, .54) !important;
+		height: @tabHeight;
+		font-weight: bold;
+		font-size: 14px;
+		@media (max-width: 680px) {
+			font-size: 12px;
+		}
+		padding: 0 24px;
+		box-sizing: border-box;
+		position: relative;
+		// Add a border to change color on focus, but keep the text vertically centered.
+		padding-top: @indicatorHeight;
+		border-bottom: #3F51B5 solid @indicatorHeight;
+		transition: color .2s @easing, background-color .4s @easing, border-bottom-color .4s @easing;
+
+		&:hover {
+			color: rgba(255,255,255, .87) !important;
+		}
+
+		&:focus, &:active {
+			color: rgba(255,255,255, .87) !important;
+			outline: none;
+			background-color: #7986CB;
+			border-bottom-color: #5C6BC0;
+		}
+
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #FFC107;
+			width: 100%;
+			left: 0;
+			top: -@indicatorHeight;
+			bottom: @tabHeight;
+			opacity: 0;
+			// This transition applies when leaving active state
+			transition: bottom @duration @easing, top @duration @easing, opacity @duration @easing;
+		}
+	}
+
+	> a:target {
+		color: white !important;
+
+		&:before {
+			top: @tabHeight - @indicatorHeight;
+			bottom: -@indicatorHeight;
+			opacity: 1;
+			// This transition applies when entering active state; do not animate the opacity.
+			transition: bottom @duration @easing, top .4s @easing;
+		}
+	}
+
+	@contentSlideDistance: 96px;
+
+	// The .DefaultTab, which must be last, will be shown if no other tab is active.
+	> section, > a:target ~ section.DefaultTab {
+		position: absolute;
+		top: @tabHeight;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		@media (max-height: 500px) {
+			bottom: -@tabHeight;
+		}
+
+		// The section contains the scrollbars around the content
+		overflow: auto;
+
+		// Changing the display property breaks transitions, so I hide it this way instead.
+		opacity: 0;
+		pointer-events: none;
+		transition: margin-left @duration @easing, opacity @duration;
+		// When a tab that precedes the active tab deactivates, slide left
+		margin-left: -@contentSlideDistance;
+	}
+
+	// The section has a single child that pads and centers the content.
+	// Merging these two elements will break the centering.  The padding
+	// and minimum size must be within the scroll container.
+	> section > div {
+		padding: 48px;
+		overflow: auto;
+		@media (max-width: 640px) {
+			padding: 16px;
+		}
+		min-height: 100%;			// Forces vertical centering via flex
+		min-width: max-content;		// Forces a horizontal scrollbar, instead of the flex centering being cut off.
+		box-sizing: border-box;		// Includes the padding in the min-height 
+
+		display: flex;				// Center the content and flow vertically
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		> * {
+			flex-shrink: 0;
+		}
+
+		&.ShrinkWrap {
+			min-width: 0;		// Remove the max-width to force the contents to wrap within the viewport.
+		}
+	}
+
+	> a:target + section ~ section {
+		// When a tab that follows the active tab deactivates, slide right
+		margin-left: @contentSlideDistance;
+	}
+
+	> a:target + section, section.DefaultTab {
+		pointer-events: auto;
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+ul.CanvasList {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+
+	li {
+		text-align: center;
+		display: block;
+		margin: 24px;
+	}
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 40px;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 20px;
+	margin-top: 0;
+}
+h1 + h2 {
+	font-style: italic;
+}
+h1, h2, p {
+	width: 100%;	// Stretch on mobile, but center the entire box on larger screens
+	max-width: 600px;
+}
+
+p {
+	text-align: justify;
+}
+
+p + .Canvas {
+	margin-top: 3rem;
+}
+
+.IconList {
+	@width: 24px;
+	@focusWidth: @width * 1.5;
+
+	position: fixed;
+	bottom: 32px;
+	z-index: 100;
+	right: 32px - (@focusWidth - @width) / 2;
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	a {
+		display: flex;
+		align-items: center;
+		margin-left: 6px;
+		// Give the icon enough room to grow when focused
+		width: @focusWidth;
+		height: 32px;
+
+		svg {
+			opacity: .7;
+			display: block;
+			width: @width;
+			transition: opacity @duration @easing, width @duration @easing, margin-left @duration @easing;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		&:focus {
+			outline: none;
+
+			svg {
+				opacity: 1;
+				// Move the icon to the left so that it stays centered
+				margin-left: -(@focusWidth - @width) / 2;
+				width: @focusWidth;
+			}
+		}
+	}
+}
