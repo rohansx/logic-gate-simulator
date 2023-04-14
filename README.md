@@ -1,6 +1,4 @@
-# logic-gate-simulator
 
-This is a Logice gate simulator which helps to understand the concept of logic gates.
 <h1>Logic Gate Simulator</h1>
 
 <p>This is a logic gate simulator that allows users to design and simulate digital circuits using fundamental logic gates such as AND, OR, XOR, Half adder, and Full adder. The simulator provides an intuitive interface for creating and visualizing circuits, and supports binary inputs and outputs.</p>
