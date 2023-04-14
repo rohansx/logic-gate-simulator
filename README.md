@@ -14,10 +14,6 @@
 <p>To launch the simulator, navigate to the directory where you cloned the repository and run the index.html file</p>
 
 
-<h2>Contributing</h2>
-
-<p>If you would like to contribute to the development of the simulator, please feel free to fork this repository and submit a pull request. We welcome contributions of all kinds, from bug fixes to new features.</p>
-
 <h2>Issues</h2>
 
 <p>If you encounter any bugs or issues while using the simulator, please open an issue in the issue tracker. Be sure to include a detailed description of the problem, as well as any error messages or steps to reproduce the issue.</p>
