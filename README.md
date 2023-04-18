@@ -5,9 +5,9 @@
 
 <h2>Installation</h2>
 
-<p>To use the simulator, you will need to have <a href="https://www.python.org/downloads/">Python</a> installed on your system. Once you have Python installed, you can clone this repository to your local machine:</p>
+<p>To use the simulator
 
-<pre><code>git clone https://github.com/yourusername/logic-gate-simulator.git</code></pre>
+<pre><code>git clone https://github.com/rohansx/logic-gate-simulator.git</code></pre>
 
 <h2>Usage</h2>
 
