@@ -8,7 +8,7 @@ body {
   font-size: 16px;
 }
 nav {
-  background-color: #1c1c1c;
+  background-color: rgba(28, 28, 28, 0.3);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
   width: 100%;
   display: -webkit-box;
@@ -33,7 +33,7 @@ nav > a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background-color:#1c1c1c;
+  color: rgba(255, 255, 255, 0.54) !important;
   color: rgba(255, 255, 255, 0.54) !important;
   height: 64px;
   font-weight: bold;
@@ -42,7 +42,6 @@ nav > a {
   box-sizing: border-box;
   position: relative;
   padding-top: 4px;
-  border-bottom: #343434 solid 4px;
   -webkit-transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), border-bottom-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -52,22 +51,22 @@ nav > a {
   }
 }
 nav > a:hover {
-  color: #ffe002 !important;
+  color: #ffffff !important;
 }
 nav > a:focus,
 nav > a:active {
   color: rgba(255, 255, 255, 0.87) !important;
   outline: none;
-  background-color: #1c1c1c;
+  background-color: #7d7d7d;
   border-bottom-color: #343434;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 1000;
 }
 nav > a:before {
   content: '';
   display: block;
   position: absolute;
-  background-color:#ffe002;
+  background-color:#ffffff;
   width: 100%;
   left: 0;
   top: -4px;
