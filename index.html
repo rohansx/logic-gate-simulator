@@ -29,7 +29,7 @@
 		<section>
 			<div class="ShrinkWrap">
 				<p>
-				An <b>AND Gate</b> performs logical Conjunction - It behsves like a truthtable , when one or both inputs are <b>Low</b> then it results as <b>0</b> , otherwise it results as <b>1</b>. 
+					The <b>AND GATE</b> implements the logical AND operation. It has two input terminals and one output terminal. The output of the AND gate is high only if both input signals are high; otherwise, the output is low. In other words, the AND gate acts like a switch that requires two inputs to be high in order for the output to be high. The truth table for the AND gate is straightforward:
 			</p>
 					
 			<div class="Canvas" style="width: 9rem; height: 17rem;">
@@ -100,7 +100,7 @@
 		            <section>
 					<div class= "ShrinkWrap">
 					 <p>
-					 An <b>OR Gate</b> is a logical disjunction- It behaves according to truthtable , it results <b>High</b> output when one or both inputs are high , otherwise it gives <b>Low</b> as an output.
+						The <b>OR GATE</b> implements the logical OR operation. Like the AND gate, it has two input terminals and one output terminal. The output of the OR gate is high if either one or both of its input signals are high, and low only if both inputs are low. The symbol for the OR gate is similar to that of the AND gate, with a curved line at the input side. The truth table for the OR gate is straightforward:
 					</p>
 						<div class="Canvas" style="width: 9rem; height: 17rem;">
 							<input type="checkbox" id="simple-or-a" style="top: 0.5rem; left: 0;" />
@@ -171,9 +171,13 @@
 		            <section>
 					<div class= "ShrinkWrap">
 					 <p>
+
+						The <b>XOR GATE</b>, also known as the exclusive OR gate, is a logic gate that has two input terminals and one output terminal. The output of the XOR gate is high if the two input signals are different (one is high and the other is low), and low if the two input signals are the same (both high or both low). The symbol for the XOR gate is similar to that of the OR gate, but with a double curved line. The truth table for the XOR gate is as follows: 
+=======
 					 A <b>XOR Gate</b> (also known as <b>EXOR</b> and pronounced as <b>Exclusive OR</b>) is a logic gate that outputs true (1 or HIGH) when the number of true inputs is odd.
 					 That means that if both inputs are false (0/LOW) or both are true, a false output results, thus representing the inequality function.
 					A way to remember XOR is: <b>"must have one or the other but not both"</b>.
+
 					</p>
 						
 						<div class="Canvas" style="width: 9rem; height: 17rem;">
@@ -251,7 +255,9 @@
 			<div class="ShrinkWrap">
 				<p>
 				A <b>Half adder</b> is defined as a basic four terminal digital device which adds two binary inputs. It ouputs the sum binary bit and a carry binary bit.
-				From the truth table we can see that the <b>Sum digit</b> of two binary inputs is outcome of XOR operation and we can realize it by using <b>XOR gate</b>. <b>Carry digit</b>of two binary inputs is outcome of AND operation and we can realize it by an <b>AND gate</b>.
+				A half adder can be constructed using basic logic gates, specifically an XOR gate and an AND gate. The XOR gate is used to produce the sum bit, while the AND gate is used to produce the carry bit. The input bits A and B are connected to the XOR gate, which produces the sum bit S. 
+				
+				<p>The same input bits A and B are also connected to the AND gate, which produces the carry bit C. The truth table for the half adder can be derived from the truth tables of the XOR and AND gates. Therefore, the half adder is a practical application of these basic logic gates, and it illustrates how complex digital circuits can be constructed using simple building blocks.</p>
 				</p>
 				<div class="Canvas" style="width: 12.5rem; height: 21rem;">
 					<input type="checkbox" id="half-adder-a" style="top: 0; left: 3.5rem;" />
@@ -344,8 +350,11 @@
 		<section>
 			<div class="ShrinkWrap">
 				<p>
-					A <b>Full Adder</b> adds three binary digits , the third digit is known as <b>C_in</b>.  The two outputs are called the <b>C_out</b> and the <b>Sum</b>. A full adder is central to most digital circuits that perform addition and subtraction.
-					The first input (which a carry-out can be chained to) is called the carry-in; the other two are usually called A and B (this designation is arbitrary; the inputs are completely symmetric).
+					A <b>FULL ADDER</b> can be constructed using basic logic gates, specifically <b>two XOR</b> gates, <b>two AND</b> gates, and <b>one OR</b> gate. The first XOR gate takes the two input bits, A and B, and produces a temporary sum bit (not the final sum bit yet). 
+					<p>The second XOR gate takes the temporary sum bit and the carry input bit, <b>C(in)</b>, and produces the final sum bit, S.</p>
+					<p>The first AND gate takes the input bits A and B, and produces a carry bit when both input bits are high.</p>
+					<p>The second AND gate takes the temporary sum bit and the carry input bit, C(in), and produces another carry bit.</p>
+					<p>The OR gate takes the two carry bits from the AND gates and produces the final carry bit, C(out). By combining these gates as described, a full adder circuit can be built to add two binary digits and a carry bit. 
 				</p>
 				<div class="Canvas" style="width: 21rem; height: 42rem;">
 					<input type="checkbox" id="full-adder-carry" style="top: 0; left: 6rem;" />
