@@ -36,3 +36,6 @@
 
 ## Demo
 visit: https://rohansx.github.io/logic-gate-simulator/index.html
+
+## Thanks to all the contributors
+![Contributors](https://contrib.rocks/image?repo=rohansx/logic-gate-simulator)
